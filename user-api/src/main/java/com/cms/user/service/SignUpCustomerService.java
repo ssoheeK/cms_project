@@ -51,7 +51,7 @@ public class SignUpCustomerService {
 
         Customer customer = customerOptional.get();
         customer.setVerificationCode(verificationCode);
-        customer.setVerifyExpiredAt(LocalDateTime.now());
+        customer.setVerifyExpiredAt(LocalDateTime.now().plusDays(1));
         return customer.getVerifyExpiredAt();
     }
 }
