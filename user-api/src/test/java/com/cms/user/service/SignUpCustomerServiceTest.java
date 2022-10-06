@@ -1,15 +1,13 @@
 package com.cms.user.service;
 
 import com.cms.user.domain.SignUpForm;
-import com.cms.user.domain.model.Customer;
+import com.cms.user.service.customer.SignUpCustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
 
 import java.time.LocalDate;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class SignUpCustomerServiceTest {

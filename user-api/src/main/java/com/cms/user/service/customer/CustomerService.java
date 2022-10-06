@@ -1,4 +1,4 @@
-package com.cms.user.service;
+package com.cms.user.service.customer;
 
 import com.cms.user.domain.model.Customer;
 import com.cms.user.domain.repository.CustomerRepository;

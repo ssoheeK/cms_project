@@ -1,6 +1,6 @@
 package com.cms.user.config.filter;
 
-import com.cms.user.service.CustomerService;
+import com.cms.user.service.customer.CustomerService;
 import com.sohee.domain.common.UserVo;
 import com.sohee.domain.config.JwtAuthenticationProvider;
 import lombok.RequiredArgsConstructor;
@@ -10,9 +10,9 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = "/customer/*")
+@WebFilter(urlPatterns = {"/customer/*", "/seller/*"})
 @RequiredArgsConstructor
-public class CustomerFilter implements Filter {
+public class AuthFilter implements Filter {
 
     private final JwtAuthenticationProvider jwtAuthenticationProvider;
     private final CustomerService customerService;
