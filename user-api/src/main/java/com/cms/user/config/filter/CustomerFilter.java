@@ -12,7 +12,7 @@ import java.io.IOException;
 
 @WebFilter(urlPatterns = {"/customer/*", "/seller/*"})
 @RequiredArgsConstructor
-public class AuthFilter implements Filter {
+public class CustomerFilter implements Filter {
 
     private final JwtAuthenticationProvider jwtAuthenticationProvider;
     private final CustomerService customerService;
