@@ -1,6 +1,7 @@
 package com.cms.order.domain.model;
 
 import com.cms.order.domain.product.AddProductItemForm;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.envers.AuditOverride;
 import org.hibernate.envers.Audited;
@@ -29,6 +30,7 @@ public class ProductItem extends BaseEntity{
 
     private Integer count;  // 재고
 
+    @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "product_id")
     private Product product;

@@ -1,10 +1,7 @@
 package com.cms.order.controller;
 
 import com.cms.order.domain.model.Product;
-import com.cms.order.domain.product.AddProductForm;
-import com.cms.order.domain.product.AddProductItemForm;
-import com.cms.order.domain.product.ProductDto;
-import com.cms.order.domain.product.ProductItemDto;
+import com.cms.order.domain.product.*;
 import com.cms.order.service.ProductItemService;
 import com.cms.order.service.ProductService;
 import com.sohee.domain.config.JwtAuthenticationProvider;
@@ -35,5 +32,17 @@ public class SellerProductController {
 
         Product product = productItemService.addProductItem(provider.getUserVo(token).getId(), form);
         return ResponseEntity.ok(ProductDto.from(product));
+    }
+
+    @PutMapping
+    public ResponseEntity<?> updateProduct(@RequestHeader(name = "X-AUTH-TOKEN") String token,
+                                           @RequestBody UpdateProductForm form) {
+        return ResponseEntity.ok(productService.updateProduct(provider.getUserVo(token).getId(), form));
+    }
+
+    @PutMapping("/item")
+    public ResponseEntity<?> updateProductItem(@RequestHeader(name = "X-AUTH-TOKEN") String token,
+                                               @RequestBody UpdateProductItemForm form) {
+        return ResponseEntity.ok(productItemService.updateProductItem(provider.getUserVo(token).getId(), form));
     }
 }
