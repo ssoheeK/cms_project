@@ -1,6 +1,7 @@
 package com.cms.order.domain.model;
 
 import com.cms.order.domain.product.AddProductForm;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.envers.AuditOverride;
 import org.hibernate.envers.Audited;
@@ -27,9 +28,9 @@ public class Product extends BaseEntity{
     private String name;
     private String description;
 
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "product_id")
-    @Builder.Default
     private List<ProductItem> productItems = new ArrayList<>();
 
     public static Product of(Long sellerId, AddProductForm form) {
