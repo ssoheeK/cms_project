@@ -40,6 +40,7 @@ public class Seller extends BaseEntity {
                 .birth(form.getBirth())
                 .phone(form.getPhone())
                 .verify(false)
+                .balance(0)
                 .build();
     }
 }

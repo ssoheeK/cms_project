@@ -1,0 +1,30 @@
+### 상품 추가
+POST http://localhost:8080/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2eEhWUGxwU29SMGkvNXoxVjIxeFhEbWs2eWIyaE1lMjJmRnF2T0xnREY4PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY1MjE4NTQ4LCJleHAiOjE2NjUzMDQ5NDh9.Qcdp1dAW73wisvw32tgbxHNl_Wur09dmCrtuw-8uxYQ
+
+{
+  "description": "string",
+  "items": [
+    {
+      "count": 1,
+      "name": "270",
+      "price": 90000
+    }
+  ],
+  "name": "나이키 데이브레이크"
+}
+
+### 상품 아이템 추가
+POST http://localhost:8080/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2eEhWUGxwU29SMGkvNXoxVjIxeFhEbWs2eWIyaE1lMjJmRnF2T0xnREY4PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY1MjE4NTQ4LCJleHAiOjE2NjUzMDQ5NDh9.Qcdp1dAW73wisvw32tgbxHNl_Wur09dmCrtuw-8uxYQ
+
+
+{
+  "productId": 4,
+  "count": 1,
+  "name": "270",
+  "price": 90000
+}
+
