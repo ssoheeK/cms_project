@@ -1,8 +1,8 @@
-package com.sohee.domain.config;
+package com.cms.domain.config;
 
-import com.sohee.domain.common.UserType;
-import com.sohee.domain.common.UserVo;
-import com.sohee.domain.util.Aes256Util;
+import com.cms.domain.common.UserType;
+import com.cms.domain.common.UserVo;
+import com.cms.domain.util.Aes256Util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;

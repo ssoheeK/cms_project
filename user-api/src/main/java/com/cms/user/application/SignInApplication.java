@@ -6,13 +6,13 @@ import com.cms.user.domain.model.Seller;
 import com.cms.user.exception.CustomException;
 import com.cms.user.service.customer.CustomerService;
 import com.cms.user.service.seller.SellerService;
-import com.sohee.domain.config.JwtAuthenticationProvider;
+import com.cms.domain.config.JwtAuthenticationProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import static com.cms.user.exception.ErrorCode.LOGIN_CHECK_FAIL;
-import static com.sohee.domain.common.UserType.CUSTOMER;
-import static com.sohee.domain.common.UserType.SELLER;
+import static com.cms.domain.common.UserType.CUSTOMER;
+import static com.cms.domain.common.UserType.SELLER;
 
 @Service
 @RequiredArgsConstructor

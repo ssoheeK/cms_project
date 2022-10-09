@@ -1,4 +1,4 @@
-package com.sohee.domain.common;
+package com.cms.domain.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -4,7 +4,7 @@ import com.cms.order.domain.model.Product;
 import com.cms.order.domain.product.*;
 import com.cms.order.service.ProductItemService;
 import com.cms.order.service.ProductService;
-import com.sohee.domain.config.JwtAuthenticationProvider;
+import com.cms.domain.config.JwtAuthenticationProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

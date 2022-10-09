@@ -1,9 +1,8 @@
 package com.cms.user.config.filter;
 
-import com.cms.user.service.customer.CustomerService;
 import com.cms.user.service.seller.SellerService;
-import com.sohee.domain.common.UserVo;
-import com.sohee.domain.config.JwtAuthenticationProvider;
+import com.cms.domain.common.UserVo;
+import com.cms.domain.config.JwtAuthenticationProvider;
 import lombok.RequiredArgsConstructor;
 
 import javax.servlet.*;

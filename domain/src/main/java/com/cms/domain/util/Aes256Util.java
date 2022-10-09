@@ -1,4 +1,4 @@
-package com.sohee.domain.util;
+package com.cms.domain.util;
 
 import org.apache.tomcat.util.codec.binary.Base64;
 

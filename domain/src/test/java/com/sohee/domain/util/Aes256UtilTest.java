@@ -1,5 +1,6 @@
 package com.sohee.domain.util;
 
+import com.cms.domain.util.Aes256Util;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

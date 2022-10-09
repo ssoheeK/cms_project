@@ -1,6 +1,6 @@
 package com.cms.order.config;
 
-import com.sohee.domain.config.JwtAuthenticationProvider;
+import com.cms.domain.config.JwtAuthenticationProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
