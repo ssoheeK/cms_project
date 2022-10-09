@@ -59,3 +59,12 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2eEhWUGxwU29SMGkvNXoxVjIxeFhEbWs2e
   "name": "나이키 에어포스 150",
   "price": 170000
 }
+
+
+### 상품 검색
+GET http://localhost:8080/search/product?name=나이키
+Content-Type: application/json
+
+### 상품 디테일 검색
+GET http://localhost:8080/search/product/detail?productId=3
+Content-Type: application/json
