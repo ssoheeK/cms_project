@@ -2,9 +2,9 @@ package com.cms.order.controller;
 
 import com.cms.domain.config.JwtAuthenticationProvider;
 import com.cms.order.application.CartApplication;
+import com.cms.order.application.OrderApplication;
 import com.cms.order.domain.product.AddProductCartForm;
 import com.cms.order.domain.redis.Cart;
-import com.cms.order.service.CartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +16,7 @@ public class CustomerCartController {
 
     // 임시 코드
     private final CartApplication cartApplication;
+    private final OrderApplication orderApplication;
     private final JwtAuthenticationProvider provider;
 
     @PostMapping
@@ -33,5 +34,12 @@ public class CustomerCartController {
     public ResponseEntity<Cart> updateCart(@RequestHeader(name = "X-AUTH-TOKEN") String token,
                                            @RequestBody Cart cart) {
         return ResponseEntity.ok(cartApplication.updateCart(provider.getUserVo(token).getId(), cart));
+    }
+
+    @PostMapping("/order")
+    public ResponseEntity<Cart> order(@RequestHeader(name = "X-AUTH-TOKEN") String token,
+                                           @RequestBody Cart cart) {
+        orderApplication.order(token, cart);
+        return ResponseEntity.ok().build();
     }
 }

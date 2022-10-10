@@ -57,7 +57,7 @@ public class CartApplication {
         return returnCart;
     }
 
-    private Cart refreshCart(Cart cart) {
+    public Cart refreshCart(Cart cart) {
         // 1. 상품이나 상품의 아이템의 정보, 가격, 수량이 변경되었는지 체크 -> 그에 맞는 알람 제공
         // 2. 상품의 수량, 가격을 우리가 임의로 변경한다.
 
